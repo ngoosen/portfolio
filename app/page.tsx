@@ -1,5 +1,6 @@
 import styles from "./page.module.scss";
 
+import ContactScreen from "./components/ContactScreen";
 import Screen from "./components/Screen";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Screen color="#ac2525">
         <h1>Tiiiiiiiitre</h1>
       </Screen>
+      <ContactScreen />
     </main>
   );
 }

@@ -1,0 +1,30 @@
+$minHeight: 20lvh;
+
+.main {
+  position: sticky;
+  top: 0;
+
+  width: 100lvw;
+  height: 100lvh;
+
+  background-color: #2abde2;
+
+  section {
+    height: $minHeight;
+
+    background-color: inherit;
+
+    background-image: url("/placeholder.png");
+    background-size: 100% 100%;
+
+    animation: scroll linear forwards;
+    animation-timeline: view();
+    animation-range: $minHeight 100lvh;
+  }
+}
+
+@keyframes scroll {
+  to {
+    height: 100lvh;
+  }
+}
