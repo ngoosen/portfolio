@@ -1,15 +1,19 @@
-$minHeight: 20lvh;
+$minHeight: 0;
 
 .main {
   position: sticky;
   top: 0;
 
   width: 100lvw;
-  height: 100lvh;
+  height: 200lvh;
 
   background-color: #2abde2;
 
-  section {
+  .title {
+    position: sticky;
+    top: 0;
+
+    width: 100lvw;
     height: $minHeight;
 
     background-color: inherit;
@@ -19,12 +23,41 @@ $minHeight: 20lvh;
 
     animation: scroll linear forwards;
     animation-timeline: view();
-    animation-range: $minHeight 100lvh;
+    animation-range: $minHeight 200lvh;
+  }
+
+  .contact_form_frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 0;
+    height: 200lvh;
+
+    background-color: #3eeed6;
+
+    animation: slide_in linear forwards;
+    animation-timeline: view();
+    animation-range: $minHeight 200lvh;
   }
 }
 
 @keyframes scroll {
-  to {
+  50% {
+    width: 100lvw;
     height: 100lvh;
+  }
+  100% {
+    width: 50lvw;
+    height: 100lvh;
+  }
+}
+
+@keyframes slide_in {
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 50lvw;
   }
 }
