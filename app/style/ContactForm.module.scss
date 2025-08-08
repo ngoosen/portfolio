@@ -1,4 +1,4 @@
-$focusColor: #8970cc;
+$focusColor: #801b99;
 
 .container {
   position: absolute;
@@ -10,7 +10,7 @@ $focusColor: #8970cc;
 
 .main {
   position: sticky;
-  top: 0 !important;
+  top: 0;
 
   width: 0;
   height: 100lvh;
@@ -35,6 +35,9 @@ $focusColor: #8970cc;
 
 .form {
   $marginTopBottom: 7lvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   width: 100%;
   height: calc(100% - (2 * $marginTopBottom));
