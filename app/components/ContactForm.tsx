@@ -56,28 +56,32 @@ export default function ContactForm() {
         <form className={styles.form} onSubmit={formSubmitHandler}>
           <section>
             <article>
-              <label htmlFor="firstname">Firstname :</label>
               <input type="text" id="firstname" required value={firstname} onChange={valueChangeHandler} />
+              <label htmlFor="firstname">Firstname :</label>
             </article>
             <article>
-              <label htmlFor="lastname">Lastname :</label>
               <input type="text" id="lastname" required value={lastname} onChange={valueChangeHandler} />
+              <label htmlFor="lastname">Lastname :</label>
             </article>
           </section>
           <section>
             <article>
-              <label htmlFor="email">Email :</label>
               <input type="email" name="email" id="email" required value={email} onChange={valueChangeHandler} />
+              <label htmlFor="email">Email :</label>
             </article>
           </section>
           <section>
             <article>
+              <textarea name="message" id="message" rows={8} required value={message} onChange={messageValueChangeHandler}></textarea>
               <label htmlFor="message">Message :</label>
-              <textarea name="message" id="message" rows={5} required value={message} onChange={messageValueChangeHandler}></textarea>
             </article>
           </section>
 
-          <button type="submit">Send</button>
+          <section>
+            <article>
+              <button type="submit">Send</button>
+            </article>
+          </section>
         </form>
       </div>
     </div>
