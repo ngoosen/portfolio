@@ -8,14 +8,12 @@
 
 .main {
   position: sticky;
-  top: 5lvh !important;
+  top: 0 !important;
 
   width: 0;
-  height: 90lvh;
+  height: 100lvh;
 
   margin: 0 5lvw;
-
-  background-color: #ffffff;
 
   overflow: hidden;
 
@@ -34,5 +32,13 @@
 }
 
 .form {
+  $marginTopBottom: 7lvh;
+
+  width: 100%;
+  height: calc(100% - (2 * $marginTopBottom));
+
+  margin: $marginTopBottom 0;
+
   color: #000000;
+  background-color: #ffffff;
 }

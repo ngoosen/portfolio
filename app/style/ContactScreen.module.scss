@@ -5,7 +5,7 @@ $minHeight: 0;
   top: 0;
 
   width: 100lvw;
-  height: 200lvh;
+  height: 300lvh;
 
   background-color: #2abde2;
 
@@ -19,7 +19,8 @@ $minHeight: 0;
     background-color: inherit;
 
     background-image: url("/placeholder.png");
-    background-size: 100% 100%;
+    background-size: 100% 66%;
+    background-repeat: no-repeat;
 
     animation: scroll linear forwards;
     animation-timeline: view();
@@ -32,7 +33,7 @@ $minHeight: 0;
     right: 0;
 
     width: 0;
-    height: 200lvh;
+    height: 250lvh;
 
     background-color: #3eeed6;
 
@@ -45,11 +46,15 @@ $minHeight: 0;
 @keyframes scroll {
   50% {
     width: 100lvw;
-    height: 100lvh;
+    height: 150lvh;
+  }
+  90% {
+    width: 50lvw;
+    height: 150lvh;
   }
   100% {
     width: 50lvw;
-    height: 100lvh;
+    height: 150lvh;
   }
 }
 
