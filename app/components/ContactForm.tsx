@@ -2,6 +2,7 @@
 
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 import styles from "../style/ContactForm.module.scss";
+import FunButton from "./ui/FunButton";
 
 export default function ContactForm() {
   const [firstname, setFirstname] = useState<string>("");
@@ -79,7 +80,7 @@ export default function ContactForm() {
 
           <section>
             <article>
-              <button type="submit">Send</button>
+              <FunButton type="submit">Send</FunButton>
             </article>
           </section>
         </form>

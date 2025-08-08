@@ -1,0 +1,62 @@
+$color: #801b99;
+$shadowDistance: 5px;
+
+.container {
+  border: none;
+  background-color: transparent;
+
+  position: relative;
+
+  padding-right: $shadowDistance;
+  padding-bottom: $shadowDistance;
+
+  .main,
+  .shadow {
+    padding: 10px 30px;
+
+    border: 4px solid $color;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+
+    p {
+      color: $color;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .shadow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    background-color: $color;
+
+    transition: transform .2s;
+  }
+
+  .main {
+    position: relative;
+
+    transition: transform .2s;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .main {
+      transform: translate($shadowDistance, $shadowDistance);
+    }
+  }
+
+  &:active {
+    .main {
+      transform: translate($shadowDistance, $shadowDistance) scale(.95, .9);
+    }
+
+    .shadow {
+      transform: scale(.95, .9);
+    }
+  }
+}
