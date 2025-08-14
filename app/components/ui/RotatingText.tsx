@@ -15,10 +15,39 @@ export default function RotatingText(props: ROTATING_TEXT_PROPS) {
 
   const [splitChildren, setSplitChildren] = useState<string[]>([]);
   const [isHover, setIsHover] = useState<boolean>(false);
+  const [delayCount, setDelayCount] = useState<number>(0);
 
   useEffect(() => {
     setSplitChildren(children.split(""));
   }, [children]);
+
+  useEffect(() => {
+    const delay = setInterval(() => {
+      if (isHover) {
+        setDelayCount(latest => {
+          if (latest === splitChildren.length) {
+            clearInterval(delay);
+            return latest;
+          } else {
+            return latest + 1;
+          }
+        });
+      } else {
+        setDelayCount(latest => {
+          if (latest === 0) {
+            clearInterval(delay);
+            return 0;
+          } else {
+            return latest - 1;
+          }
+        });
+      }
+    }, 10);
+
+    return () => {
+      clearInterval(delay);
+    }
+  }, [isHover, splitChildren]);
 
   return (
     <div
@@ -30,10 +59,7 @@ export default function RotatingText(props: ROTATING_TEXT_PROPS) {
         {splitChildren.map((child, index) => (
           <span
             key={`rotating_text_main_${index}`}
-            className={isHover ? styles.animation_forwards : styles.animation_backwards}
-            style={{
-              animationDelay: `${(isHover ? index : splitChildren.length - index) * .04}s`,
-            }}
+            style={{ top: index < delayCount ? "-33px" : "0", }}
           >
             {child}
           </span>
@@ -43,10 +69,7 @@ export default function RotatingText(props: ROTATING_TEXT_PROPS) {
         {splitChildren.map((child, index) => (
           <span
             key={`rotating_text_copy_${index}`}
-            className={isHover ? styles.animation_forwards : styles.animation_backwards}
-            style={{
-              animationDelay: `${(isHover ? index : splitChildren.length - index) * .04}s`,
-            }}
+            style={{ top: index < delayCount ? "-33px" : "0", }}
           >
             {child}
           </span>
