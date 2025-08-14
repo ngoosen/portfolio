@@ -1,0 +1,50 @@
+$topDifference: -33px;
+$animationDuration: .2s;
+
+.container {
+  width: fit-content;
+  height: 33px;
+
+  margin: 5px 0;
+
+  overflow: hidden;
+
+  .main,
+  .copy {
+    position: relative;
+
+    font-size: 25px;
+    user-select: none;
+
+    span {
+      position: relative;
+    }
+  }
+}
+
+.animation_forwards {
+  animation: slide_forwards ease-out $animationDuration forwards;
+}
+
+.animation_backwards {
+  top: $topDifference;
+  animation: slide_backwards ease-out $animationDuration forwards;
+}
+
+@keyframes slide_forwards {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: $topDifference;
+  }
+}
+
+@keyframes slide_backwards {
+  0% {
+    top: $topDifference;
+  }
+  100% {
+    top: 0;
+  }
+}
