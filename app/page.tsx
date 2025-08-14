@@ -2,6 +2,7 @@ import styles from "./page.module.scss";
 
 import ContactScreen from "./components/ContactScreen";
 import Screen from "./components/Screen";
+import Parallax from "./components/ui/Parallax";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Screen color="#e69438">
         <h1>Tiiiiiiiitre</h1>
       </Screen>
+      <Parallax imageSrc="/images/placeholder_parallax.jpg" />
       <Screen color="#ac2525">
         <h1>Tiiiiiiiitre</h1>
       </Screen>

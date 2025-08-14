@@ -1,0 +1,30 @@
+.main {
+  position: relative;
+
+  width: 100lvw;
+  height: 50lvh;
+
+  // background-image: url("/images/placeholder_parallax.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+  background-attachment: fixed;
+
+  animation: size_up linear forwards;
+  animation-timeline: view();
+
+  article {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes size_up {
+  to {
+    background-size: 150%;
+  }
+}
