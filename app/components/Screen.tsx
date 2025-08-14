@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import styles from "../style/Screen.module.scss";
 
 interface SCREEN_PROPS {
-  children: ReactNode
+  children: ReactNode | ReactNode[]
   color: string;
 }
 
