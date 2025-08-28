@@ -1,10 +1,13 @@
 .container {
+  display: inline-block;
+
   width: fit-content;
   height: 33px;
 
   margin: 5px 0;
 
   overflow: hidden;
+  transform: translateY(11px);
 
   .main,
   .copy {
