@@ -54,9 +54,5 @@ $shadowDistance: 5px;
     .main {
       transform: translate($shadowDistance, $shadowDistance) scale(.95, .9);
     }
-
-    .shadow {
-      transform: scale(.95, .9);
-    }
   }
 }
