@@ -1,0 +1,51 @@
+$bgCOlor: #ac2525;
+
+.main {
+  position: relative;
+
+  padding-top: 100px;
+
+  background-color: $bgCOlor;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+
+    margin-left: 100px;
+  }
+
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+
+    article {
+      flex: 1;
+
+      width: 33%;
+      height: 40lvh;
+
+      padding: 50px;
+
+      color: $bgCOlor;
+
+      background-position: 50%;
+      background-repeat: no-repeat;
+
+      transition: all .5s;
+
+      ul {
+        list-style: none;
+      }
+
+      &:hover {
+        flex: 2;
+
+        height: 50lvh;
+
+        color: #ffffff;
+
+        background-image: url("../../../public/images/placeholder_skills.jpg");
+      }
+    }
+  }
+}
